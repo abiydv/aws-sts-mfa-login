@@ -33,7 +33,7 @@ jq installed and available on the default shell $PATH for the script to use
 
 2. Generate a new token by running the script and providing the MFA token as the first and only argument
     ```
-    ./login.sh 123456
+    sh login.sh 123456
     ```
 
 3. You will see an output such as 
@@ -43,13 +43,17 @@ jq installed and available on the default shell $PATH for the script to use
     ```
 
 4. Run the above output on the terminal, and start using the new profile
-5. (optional) Add this to your bashrc if you don't want to keep exporting the new MFA profile
+5. (optional) Add this to your bash_profile if you don't want to keep exporting the new MFA profile
    ```
-   export AWS_PROFILE=mfa
+   echo "export AWS_PROFILE=mfa" >> ~/.bash_profile
    ```
-6. (optional) Add this to your bashrc if you want to run it from anywhere
+6. (optional) Add this to your bash_profile if you want to run it from anywhere on the system
    ```
-   alias awsmfalogin='sh /tmp/login.sh'
+   echo "alias awsmfalogin='sh /tmp/login.sh'" >> ~/.bash_profile
+   ```
+7. (optional) Once 6 is completed, you can simply invoke the script as
+   ```
+   awsmfalogin 123456 
    ```
 
 ## Notes
