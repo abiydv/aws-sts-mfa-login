@@ -5,19 +5,19 @@ For use with AWS accounts enforcing MFA. This script can fetch MFA authenticated
 
 ## Pre-requisites
 
-A default aws_profile should be setup using the basic credentials which allows you to make calls to sts endpoint. It can be created using `aws configure`
+- A default aws_profile should be setup using the basic credentials which allows you to make calls to sts endpoint. It can be created using `aws configure`
 The default credential file will then look like this 
-```
-[default]
-aws_access_key_id=SOMETHING
-aws_secret_access_key=SOMEKEY
-region=us-east-1
+    ```
+    [default]
+    aws_access_key_id=SOMETHING
+    aws_secret_access_key=SOMEKEY
+    region=us-east-1
 
-```
+    ```
 
-A backup directory under the defined home directory (`/home/users/iam_user/backup`)
+- A backup directory under the defined home directory (`/home/users/iam_user/backup`)
 
-jq installed and available on the default shell $PATH for the script to use
+- [jq](https://github.com/stedolan/jq) is installed and available on the default shell `PATH` for the script to use
 
 
 ## How to use
