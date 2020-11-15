@@ -3,6 +3,8 @@
 
 For use with AWS accounts enforcing MFA. This script can fetch MFA authenticated sessions keys for use on terminal.
 
+I have added a post with more details here - https://abiydv.github.io/posts/aws-cli-mfa-login/
+
 ## Pre-requisites
 
 - A default aws_profile should be setup using the basic credentials which allows you to make calls to sts endpoint. It can be created using `aws configure`
